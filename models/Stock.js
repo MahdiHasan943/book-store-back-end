@@ -90,7 +90,7 @@ const stockSchema = mongoose.Schema({
     name: {
       type: String,
       trim: true,
-      required: [true, "Please provide a supplier name"],
+    
     },
     id: {
       type: ObjectId,

@@ -1,8 +1,11 @@
+const { createStockS, getStockS } = require("../services/stockS")
+
 module.exports.createStock = async (req, res) => {
     try {
+        const result = await createStockS(req.body);
         res.status(200).json({
             status: "success",
-            data:'ddkd'
+            data: result
         })
     }
     catch (err) {
@@ -14,9 +17,10 @@ module.exports.createStock = async (req, res) => {
 }
 module.exports.getStock = async (req, res) => {
     try {
+        const result=await getStockS(req.body)
         res.status(200).json({
             status: "success",
-            data:'ddkd'
+            data: result
         })
     }
     catch (err) {
