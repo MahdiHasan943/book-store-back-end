@@ -13,7 +13,7 @@ let isConnected = false; // track the connection
   }
 
   try {
-    await mongoose.connect(process.env.Rdd, {
+    await mongoose.connect(process.env.ATLAS_URI, {
       dbName: "book-store",
       useNewUrlParser: true,
       useUnifiedTopology: true,
