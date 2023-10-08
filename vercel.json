@@ -8,6 +8,10 @@
     ],
     "routes": [
         {
+            "src": "/api/v1/category",
+            "dest": "/index.js" 
+        },
+        {
             "src": "/(.*)",
             "dest": "/"
         }
