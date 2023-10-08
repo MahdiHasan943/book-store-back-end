@@ -7,6 +7,6 @@ router
     .post(stockC.createStock)
 
 router.route('/:id')
-    .get() 
+    .get(stockC.getStockById) 
    
 module.exports = router;

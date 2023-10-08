@@ -7,3 +7,7 @@ module.exports.getStockS = async () => {
     const result=await Stock.find({})
     return result;
 }
+module.exports.getStockCbyId = async (id) => {
+    const result =await Stock.findOne({_id:id})
+ return result;
+}
