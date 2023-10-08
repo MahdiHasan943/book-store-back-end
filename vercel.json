@@ -8,7 +8,10 @@
     ],
     "routes": [
         {
-            "src": "/api/v1/category/(.*)",
+            "handle": "filesystem"
+          },
+        {
+            "src": "/api/v1/category/.*",
             "dest": "./index.js"
         },
         {
@@ -28,7 +31,7 @@
             "dest": "./index.js"
         },
         {
-            "src": "/(.*)",
+            "src": "/.*",
             "dest": "./index.js"
         }
     ]
