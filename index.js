@@ -20,7 +20,7 @@ app.use("/api/v1/products",products)
 
 
 app.get("/", (req, res) => {
-  res.send("hello");
+  res.sendFile(__dirname + "/html/index.html");
 });
 
 

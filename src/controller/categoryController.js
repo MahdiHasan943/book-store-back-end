@@ -23,7 +23,7 @@ module.exports.getcateGory = async (req, res, next) => {
 
 module.exports.createCategory = async (req, res, next) => {
     try {
-        const result = await getCategory(req.body);
+        const result = await createCategory(req.body);
         console.log(result);
 
         res.status(200).json({
