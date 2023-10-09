@@ -6,11 +6,11 @@
         "use": "@vercel/node"
       }
     ],
-    "routes": [
-      {
-        "src": "/api/v1/(.*)", 
-        "dest": "/index.js"    
+    "functions": {
+      "myFunction": {
+        "handler": "index.handler",
+        "timeout": 30 
       }
-    ]
+    }
   }
   
