@@ -8,12 +8,13 @@
     ],
     "routes": [
         {
-            "handle": "filesystem"
-          },
-          {
-            "src": "/api/v1/:cetegory/(.*)",
-            "dest": "/routes/v1/:cetegory/$1"
-          }
-      
+            "src": "/(.*)",
+            "dest": "/"
+        }
+        ,{
+                "src": "/api/v1/:cetegory/(.*)",
+                "dest": "/routes/v1/:cetegory/$1"
+              
+        }
     ]
 }
