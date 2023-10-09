@@ -6,14 +6,7 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [
-        {
-            "src": "/api/v1/category",
-            "dest": "/routes/api/v1/category.route.js"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/app.js"
-        }
-    ]
-}
+    
+        "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
+      
+    }

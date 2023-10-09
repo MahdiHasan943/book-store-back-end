@@ -6,7 +6,7 @@ router
     .get(productsC.getProducts)
     .post(productsC.createProducts)
 
-router.route('/:id')
-    .get() 
+// router.route('/:id')
+//     .get() 
    
 module.exports = router;
