@@ -2,33 +2,17 @@
     "version": 2,
     "builds": [
       {
-        "src": "./app.js",
+        "src": "app.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/v1/category/(.*)",
-        "dest": "/routes/v1/category/$1"
+        "src": "/api/v1/:cetegory/(.*)",
+        "dest": "/routes/v1/:cetegory/$1"
       },
       {
-        "src": "/api/v1/store/(.*)",
-        "dest": "/routes/v1/store/$1"
-      },
-      {
-        "src": "/api/v1/brand/(.*)",
-        "dest": "/routes/v1/brand/$1"
-      },
-      {
-        "src": "/api/v1/stock/(.*)",
-        "dest": "/routes/v1/stock/$1"
-      },
-      {
-        "src": "/api/v1/products/(.*)",
-        "dest": "/routes/v1/products/$1"
-      },
-      {
-        "src": "./(.*)",
+        "src": "/(.*)",
         "dest": "/$1"
       }
     ]
