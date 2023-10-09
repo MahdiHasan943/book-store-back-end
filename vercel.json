@@ -12,9 +12,8 @@
             "dest": "/"
         },
         {
-            "src": "/api/v1/:cetegory/(.*)",
-            "dest": "/routes/api/v1/category.route.js",
-            "methods": ["GET"]
+            "src": "./routes/api/v1/category.route",
+            "dest": "/api/v1/category"
         
         }
     ]
