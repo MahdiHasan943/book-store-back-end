@@ -13,7 +13,7 @@
         },
         {
             "src": "/api/v1/:cetegory/(.*)",
-            "dest": "/routes/v1/:category.route/$1",
+            "dest": "/routes/api/v1/category.route.js",
             "methods": ["GET"]
         
         }

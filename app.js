@@ -2,11 +2,11 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
-const category = require('./routes/v1/category.route')
-const  store= require('./routes/v1/store.route')
-const  brand= require('./routes/v1/brandrouter')
-const  stock= require('./routes/v1/stockroute')
-const  products= require('./routes/v1/productroute')
+const category = require('./routes/api/v1/category.route')
+const  store= require('./routes/api/v1/store.route')
+const  brand= require('./routes/api/v1/brandrouter')
+const  stock= require('./routes/api/v1/stockroute')
+const  products= require('./routes/api/v1/productroute')
 
 
 app.use(express.json());

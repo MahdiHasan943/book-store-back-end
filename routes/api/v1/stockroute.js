@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const stockC=require('../../controller/stockController')
+const stockC=require('../../../controller/stockController')
 router
     .route('/')
     .get(stockC.getStock)
