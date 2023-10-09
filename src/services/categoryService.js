@@ -8,6 +8,7 @@ module.exports.getCategory = async () => {
     return result;
     
 }
+
 // module.exports.getProductServices = async () => {
 //     const brands = await Category.find({}).select('-products,-suppliers');
 //     return brands
