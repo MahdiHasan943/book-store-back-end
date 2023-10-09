@@ -6,7 +6,6 @@
             "use": "@vercel/node"
         }
     ],
-    "redirects": [{ "source": "/routes/api/v1/category.route/(.*)", "destination": "/api/v1/category" }]
 ,
     "routes": [
         {
@@ -14,9 +13,9 @@
             "dest": "/"
         },
         {
-            "src": "/routes/api/v1/category.route",
-            "dest": "https://server-side-fxf2wo55k-mahdihasan943.vercel.app//api/v1/category"
-        
+            "src": "/routes/api/v1/category.route/(.*)",
+            "dest": "/api/v1/category "
+
         }
     ]
 }
