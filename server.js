@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const colors = require("colors");
-const app =require('./app')
+const app =require('./index')
 const { connectDB } = require("./utils/dbConnect");
 
 
