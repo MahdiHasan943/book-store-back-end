@@ -1,15 +1,9 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "./index.js",
-        "use": "@vercel/node"
-      }
-    ],
     "functions": {
       "myFunction": {
-        "handler": "index.handler",
-        "timeout": 30 
+        "handler": "api/myFunction.js",
+        "timeout": 10
       }
     }
   }
