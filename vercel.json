@@ -6,7 +6,7 @@
             "use": "@vercel/node"
         }
     ],
-    "rewrites": [{ "source": "/routes/api/v1/category.route/(.*)", "destination": "/api/v1/category" }]
+    "redirects": [{ "source": "/routes/api/v1/category.route/(.*)", "destination": "/api/v1/category" }]
 ,
     "routes": [
         {
