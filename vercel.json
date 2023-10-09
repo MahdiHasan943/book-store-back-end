@@ -8,12 +8,12 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/"
+            "src": "/api/v1/category",
+            "dest": "/routes/api/v1/category.route.js"
         },
         {
-            "src": "/routes/api/v1/category.route/(.*)",
-            "dest": "/api/v1/category"
+            "src": "/(.*)",
+            "dest": "/app.js"
         }
     ]
 }
