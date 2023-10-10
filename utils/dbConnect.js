@@ -1,6 +1,7 @@
 
 const mongoose = require("mongoose");
 const colors = require("colors");
+const dotenv = require("dotenv").config();
 
 let isConnected = false; // track the connection
 
