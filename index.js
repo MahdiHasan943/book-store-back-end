@@ -6,10 +6,10 @@ const app = express();
 const cors = require("cors");
 const { connectDB } = require("./utils/dbConnect");
 const category = require('./routes/api/v1/category.route')
-// const  store= require('./routes/api/v1/store.route')
-// const  brand= require('./routes/api/v1/brandrouter')
+const  store= require('./routes/api/v1/store.route')
+const  brand= require('./routes/api/v1/brandrouter')
 const  stock= require('./routes/api/v1/stockroute')
-// const products = require('./routes/api/v1/productroute')
+const products = require('./routes/api/v1/productroute')
 
 const port = process.env.PORT || 8080;
 
@@ -18,10 +18,10 @@ app.use(cors());
 
 connectDB()
 app.use("/api/v1/category", category)
-// app.use("/api/v1/store", store)
-// app.use("/api/v1/brand",brand)
+app.use("/api/v1/store", store)
+app.use("/api/v1/brand",brand)
 app.use("/api/v1/stock",stock)
-// app.use("/api/v1/products",products)
+app.use("/api/v1/products",products)
 
 
 app.get("/", (req, res) => {
