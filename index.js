@@ -10,6 +10,8 @@ const  store= require('./routes/api/v1/store.route')
 const  brand= require('./routes/api/v1/brandrouter')
 const  stock= require('./routes/api/v1/stockroute')
 const products = require('./routes/api/v1/productroute')
+const addToCart = require('./routes/api/v1/addToCart.route')
+
 
 const port = process.env.PORT || 8080;
 
@@ -21,7 +23,9 @@ app.use("/api/v1/category", category)
 app.use("/api/v1/store", store)
 app.use("/api/v1/brand",brand)
 app.use("/api/v1/stock",stock)
-app.use("/api/v1/products",products)
+app.use("/api/v1/products", products)
+app.use("/api/v1/addToCart",addToCart)
+
 
 
 app.get("/", (req, res) => {
