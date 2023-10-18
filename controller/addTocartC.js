@@ -44,7 +44,7 @@ module.exports.getAddTo = async (req, res) => {
 }
 module.exports.updateAddToCart = async (req, res) => {
     const itemId = req.params.id;
-  const { quantity } = req.body;
+    const { quantity } = req.body;
 
   try {
     // Find the cart item by ID and update its quantity
@@ -57,6 +57,24 @@ module.exports.updateAddToCart = async (req, res) => {
     return res.json({ message: 'Cart item quantity updated successfully', updatedItem });
   } catch (error) {
     console.error('Error updating cart item quantity:', error);
+    return res.status(500).json({ message: 'Internal server error' });
+  }
+}
+
+module.exports.deleteAddToCart = async (req, res) => {
+  const itemId = req.params.id;
+
+  try {
+    // Find and delete the cart item by ID
+    const deletedItem = await AddToCart.findByIdAndRemove(itemId);
+
+    if (!deletedItem) {
+      return res.status(404).json({ message: 'Cart item not found' });
+    }
+
+    return res.json({ message: 'Cart item deleted successfully', deletedItem });
+  } catch (error) {
+    console.error('Error deleting cart item:', error);
     return res.status(500).json({ message: 'Internal server error' });
   }
 }

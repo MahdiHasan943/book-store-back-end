@@ -8,5 +8,7 @@ router
 
 router.route('/:id')
     .put(addTocartC.updateAddToCart) 
-   
+    .delete(addTocartC.deleteAddToCart) 
+
+    // .patch(addTocartC.updateCartItemQuantity)
 module.exports = router;
